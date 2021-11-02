@@ -1,0 +1,198 @@
+LAB 04
+
+ANJOLAIYA OLUWATOBI
+
+OCT 23RD 2021
+
+#include <iostream>
+#include <string>
+
+using namespace std;
+
+string MonthName(int month)
+{
+  if(month == 1)
+  {
+    return "January";
+  }
+  else if(month == 2)
+  {
+    return "February";
+  }
+  else if(month == 3)
+  {
+    return "March";
+  }
+  else if(month == 4)
+  {
+    return "April";
+  }
+  else if(month == 5)
+  {
+    return "May";
+  }
+  else if(month == 6)
+  {
+    return "June";
+  }
+  else if(month == 7)
+  {
+    return "July";
+  }
+  else if(month == 8)
+  {
+    return "August";
+  }
+  else if(month == 9)
+  {
+    return "September";
+  }
+  else if(month == 10)
+  {
+    return "October";
+  }
+  else if(month == 11)
+  {
+    return "November";
+  }
+  else if(month == 12)
+  {
+    return "December";
+  }
+  else
+  {
+    return "";
+  }
+}
+
+bool ValidDate(int month, int day)
+{
+  if(month == 1 || month == 3 || month == 5 || month == 7 || month == 8 || month == 10 || month == 12)
+  {
+    return (day >= 1 && day <= 31)?true:false;
+  }
+  else if(month == 4 || month == 6 || month == 9 || month == 11)
+  {
+    return (day >= 1 && day <= 30)?true:false;
+  }
+  else if(month == 2)
+  {
+    return (day >= 1 && day <= 28)?true:false;
+  }
+  else
+  {
+    return false;
+  }
+}
+
+void RetrieveDate(int& month, int& day)
+{
+  while(!ValidDate(month, day))
+  {
+    cout << "Month: ";
+    cin >> month;
+
+    cout << "Day: ";
+    cin>> day;
+
+    cout << endl;
+  }
+}
+
+string WeekDayName(int month, int day)
+{
+  int days = 0;
+  if(month == 1)
+  {
+    days = 31;
+  }
+  else if(month == 2)
+  {
+    days = 59;
+  }
+  else if(month == 3)
+  {
+    days = 90;
+  }
+  else if(month == 4)
+  {
+    days = 120;
+  }
+  else if(month == 5)
+  {
+    days = 151;
+  }
+  else if(month == 6)
+  {
+    days = 181;
+  }
+  else if(month == 7)
+  {
+    days = 212;
+  }
+  else if(month == 8)
+  {
+    days = 243;
+  }
+  else if(month == 9)
+  {
+    days = 273;
+  }
+  else if(month == 10)
+  {
+    days = 304;
+  }
+  else if(month == 11)
+  {
+    days = 334;
+  }
+  else if(month == 12)
+  {
+    days = 365;
+  }
+  int weekDay = (days + day) % 7;
+
+  if(weekDay == 0)
+  {
+    return "Tuesday";
+  }
+  else if(weekDay == 1)
+  {
+    return "Wednesday";
+  }
+  else if(weekDay == 2)
+  {
+    return "Thursday";
+  }
+  else if(weekDay == 3)
+  {
+    return "Friday";
+  }
+  else if(weekDay == 4)
+  {
+    return "Saturday";
+  }
+  else if(weekDay == 5)
+  {
+    return "Sunday";
+  }
+  else
+  {
+    return "Monday";
+  }
+}
+
+void DisplayDate()
+{
+  int month, day;
+  RetrieveDate(month, day);
+
+  cout << WeekDayName(month, day) << ", " << MonthName(month) << " " << day << ", 2003" << endl;  
+}
+
+int main()
+{
+  DisplayDate();
+  return 0;
+}
+

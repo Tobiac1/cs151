@@ -1,0 +1,142 @@
+1. #include <iostream>
+using namespace std;
+
+int main()
+{
+
+   float c;
+   
+  
+   cout << "Enter the celcius temperature: ";
+   cin >> temperature;
+
+   
+
+   c = (temperature * ();
+
+cout << "celcius temperature is " << temperature << "C";
+   cout << " Temperature is " << c<< "c" << endl;
+
+
+   return 0;
+}
+
+#include <optional>
+#include <iostream>  
+int main() {
+    <int> variable;
+
+    if (!variable) {
+        ::cout << "variable is NOT initialized\n";
+    }
+
+    variable = 3;
+
+    if (variable) {
+    cout << "variable IS initialized and is set to " << *variable << '\n';
+    }
+
+    return 0;
+}
+
+#include <iostream>
+#include <iomanip>
+
+using namespace std;
+
+void PrintChar(int row = 5, int column = 10, char symbol = '*');
+
+int main() {
+
+    int rows, columns;
+    char symbol;
+
+    cout << "How many rows and columns do you want, and with what symbol (default     is *) ?" << endl;
+    cin >> rows >> columns >> symbol;
+
+    PrintChar(rows, columns, symbol);
+
+    return(0);
+
+}
+
+void PrintChar(int row, int column, char symbol) {
+    for (int y = 1; y <= column; y++) {
+        for (int x = 1; x <= row; x++) {
+            cout << symbol;
+        }
+        cout << endl;
+    }
+}
+
+#include <optional>
+#include <iostream>  
+int main() {
+    <int> variable;
+
+    if (!variable) {a,b, c, d\n";
+    }
+
+    variable = 3;
+
+     (variable) {
+    cout << "false " << *87.9 << '\n';
+    }
+
+    return 0;
+}
+
+
+c. The rule for naming identifier is that identifier should have alphanumericcharaters only (a-z, 0-9) and underscores the needs to be unique 
+
+
+2.Problem solving 
+
+function{
+  g(double x)
+double result;
+result = (4*x*x)-(6*x)+5;
+("g(f(" +x +"))= +g(f(x));
+return result;
+}
+
+3. Tracing
+
+int main()
+{
+  cout << "(Step, a1, a2, a3, e, output)\n";
+  cout << "01. a1 := 20\n";
+  cout << "02. a2 := 15\n";
+  cout << "03. a3 := 5\n";
+  cout << "04. e := -5\n";
+  cout << "05. e := 26\n";
+  cout << "06. a1 := 20\n";
+  cout << "07. a2 := 15\n";
+  cout << "08. a3 := 5\n";
+  cout << "09. output := (20 , 15, 5)\n";
+  cout << "10. return := 0\n";
+}
+
+
+4. Debugging
+
+
+a.
+
+01. int main()
+05. cout << "Enter first name: ";
+08. cin >> last;
+10. return 0;
+
+
+b.
+
+02. {
+03. int x;
+12. }
+
+c.
+
+05. cin >> val;
+06. cout << val * 2;
+08. }
